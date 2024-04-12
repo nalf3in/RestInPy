@@ -23,7 +23,7 @@ def get_basic_auth_str(username, password):
     return f"Basic {b64encode(username_password)}"
 
 def clear_terminal():
-    if os.system == 'nt':
+    if os.name == 'nt':
         subprocess.run(['cls'], shell=True)
     else:
         subprocess.run(['clear'], shell=True)
